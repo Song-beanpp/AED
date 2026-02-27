@@ -1,0 +1,3 @@
+Model,MAE,RMSE,Improvement
+Persistence,0.34412512,1.0700964,-
+ConvLSTM,0.30488342,1.140592,11.4%

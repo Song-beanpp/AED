@@ -1,0 +1,5 @@
+File,Rows,Columns
+interventions1.parquet.gzip,200627,46
+interventions2.parquet.gzip,200627,46
+interventions3.parquet.gzip,200627,46
+interventions_bxl2.parquet.gzip,38620,36

@@ -1,0 +1,4 @@
+Model,Task,Target,Metric (MAE),Note
+Random Forest,Predict Response Time (min),Individual incident,4.8,R^2 ~ 0; External factors dominate.
+Hist. GBM,Predict Response Time (min),Individual incident,4.8,R^2 ~ 0; Spatial/Time features insufficient.
+ConvLSTM,Forecast Grid Density,Events per 0.05deg grid,0.3109999895095825,Beats persistence (0.3440000116825104) by 9.7%

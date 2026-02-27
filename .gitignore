@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+._*
+
+# Data (too large for git)
+mda_project/data/raw/
+mda_project/data/processed/
+mda_project/data/processed_v3/
+
+# IDE
+.vscode/
+.idea/
+
+# Intermediate pipeline drafts
+mda_project/0[0-4]_*.py
+mda_project/09_*.py
+
+# Keep only figures/ output
+mda_project/data/output/*
+!mda_project/data/output/figures/

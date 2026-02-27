@@ -1,0 +1,5 @@
+File,Rows,Columns
+aed_locations.parquet.gzip,15227,11
+ambulance_locations.parquet.gzip,279,9
+mug_locations.parquet.gzip,94,10
+cad9.parquet.gzip,289401,35
