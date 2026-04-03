@@ -1,0 +1,6 @@
+New_AEDs,Solver_Status,Demands_Covered,Covered_Pct
+10,Optimal,35,0.7000000000000001
+30,Optimal,76,1.52
+50,Optimal,102,2.04
+70,Optimal,122,2.44
+100,Optimal,152,3.04
