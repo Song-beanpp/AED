@@ -50,6 +50,11 @@ Per-province gap ratio showing where the highest proportion of missions exceed t
 05_multiobjective_optimization.ipynb → KMeans scenario-based cost-effectiveness
 06_spatiotemporal_deep_learning.ipynb → ConvLSTM grid density forecasting (PyTorch)
 07_lifecycle_environmental_analysis.ipynb → 10-year CAPEX+OPEX & CO₂ lifecycle
+08_stgnn_forecasting.ipynb       → Spatial Graph Attention Network (GAT) forecasting
+09_mclp_exact_optimization.ipynb → Integer Linear Programming exact placement (PuLP)
+10_health_economics.ipynb        → QALY calculations and Incremental Cost-Effectiveness Ratio (ICER)
+11_equity_analysis.ipynb         → Geographic fairness metrics (Lorenz Curve, Gini, Theil)
+12_real_walking_distances.ipynb  → True OSM routing distances vs Euclidean approximation
 run_all_notebooks.py             → End-to-end reproducible pipeline + publication figures
 config.py                        → Centralized paths, seeds & hyperparameters
 ```
