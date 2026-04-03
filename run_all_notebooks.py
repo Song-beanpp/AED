@@ -16,7 +16,7 @@ All figures and tables are saved to: mda_project/data/output/figures/
 Usage:
     python run_all_notebooks.py
 """
-import os, sys, warnings, random
+import os, sys, warnings, random, time
 import re
 import json
 from pathlib import Path
@@ -28,6 +28,22 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 warnings.filterwarnings('ignore')
+
+# ── Reproducibility: Fix all random seeds ─────────────────────────
+SEED = int(os.environ.get('AED_SEED', 42))
+random.seed(SEED)
+np.random.seed(SEED)
+try:
+    import torch
+    torch.manual_seed(SEED)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(SEED)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+except ImportError:
+    pass
+
+_start_time = time.time()
 
 # ── Paths ──────────────────────────────────────────────────────────
 PROJECT = Path(__file__).resolve().parent
@@ -662,5 +678,7 @@ ax4.set_title('(d) Policy Targets: 500 m Coverage Gap Ratio by Province\n'
 save(fig4, 'fig4_province_gap_choropleth.png')
 
 print('\n' + '='*60)
-print('ALL OUTPUTS SAVED TO:', FIG.resolve())
+elapsed = time.time() - _start_time
+print(f'ALL OUTPUTS SAVED TO: {FIG.resolve()}')
+print(f'Total pipeline runtime: {elapsed/60:.1f} minutes')
 print('='*60)

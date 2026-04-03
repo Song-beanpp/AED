@@ -8,6 +8,10 @@ __pycache__/
 .DS_Store
 ._*
 
+# Environment
+.env
+*.egg-info/
+
 # Data (too large for git)
 mda_project/data/raw/
 mda_project/data/processed/
